@@ -76,8 +76,5 @@ Open your browser and navigate to `http://localhost:8000`.
 -   **Print Utility**: Uses `@media print` queries to strip UI elements and format text for documentation.
 -   **History Management**: Local state tracking to ensure the LLM understands pronouns and follow-up context.
 
-## 🤝 Contributing
-Contributions are welcome! Pull requests, bug reports, and feature suggestions help make WikiBot AI better.
-
 ## 📄 License
 MIT License - feel free to use this project for your own learning or internal tools!
