@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="WikiBot AI - A professional Wikipedia-powered RAG assistant for intelligent information retrieval.">
+    <meta name="theme-color" content="#6366f1">
+    <title>WikiBot AI | Advanced Wikipedia Search</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/static/index.css">
+</head>
+
+<body>
+    <div class="app-wrapper">
+        <main class="chat-container" id="chat-container">
+            <header class="app-header">
+                <div class="header-left">
+                    <div class="status-indicator">
+                        <div class="status-dot"></div>
+                        <span class="status-text">Online</span>
+                    </div>
+                    <h1>WikiBot <span class="accent-text">AI</span> <span class="badge">V2.0</span></h1>
+                </div>
+                <div class="header-actions">
+                    <button id="print-btn" class="icon-btn" aria-label="Print Chat history" title="Print Conversation">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M6 9V2h12v7"></path>
+                            <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+                            <rect x="6" y="14" width="12" height="8"></rect>
+                        </svg>
+                    </button>
+                    <button id="clear-btn" class="icon-btn" aria-label="Clear chat" title="Clear Conversation">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 6h18"></path>
+                            <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"></path>
+                            <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"></path>
+                        </svg>
+                    </button>
+                </div>
+            </header>
+
+            <section id="messages" class="messages-area" role="log" aria-live="polite">
+                <div class="message bot intro">
+                    <div class="message-content">
+                        <p>Welcome to <strong>WikiBot AI</strong>. I'm connected to the Wikipedia knowledge base and
+                            ready to help you find information quickly.</p>
+                        <p>How can I assist you today?</p>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="input-area">
+                <div class="input-wrapper">
+                    <textarea id="user-input" placeholder="Ask a question..." spellcheck="false" rows="1"
+                        aria-label="User query"></textarea>
+                    <div class="action-buttons">
+                        <button id="stop-btn" class="control-btn stop hidden" aria-label="Stop generation" title="Stop">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <rect x="6" y="6" width="12" height="12"></rect>
+                            </svg>
+                        </button>
+                        <button id="send-btn" class="control-btn send" aria-label="Send message" title="Send">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="input-footer">
+                    <span>Powered by Retrieval Augmented Generation</span>
+                </div>
+            </footer>
+        </main>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+
+</html>
